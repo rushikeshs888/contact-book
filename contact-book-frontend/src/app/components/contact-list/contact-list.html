@@ -1,0 +1,156 @@
+<div class="container">
+
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <div>
+
+      <h1>Contact Book</h1>
+
+      <h2>My Contacts</h2>
+
+    </div>
+
+
+    <button
+      class="add-button"
+      [routerLink]="['/contacts/add']"
+    >
+
+      + Add Contact
+
+    </button>
+
+  </div>
+
+
+  <!-- CONTACT GRID -->
+
+  <div class="contact-grid">
+
+
+    @for (
+      contact of contacts;
+      track contact.id
+    ) {
+
+
+      <div class="contact-card">
+
+
+        <h3>
+
+          {{ contact.name }}
+
+        </h3>
+
+
+        <p>
+
+          📱
+
+          {{ contact.mobileNumber }}
+
+        </p>
+
+
+        @if (contact.email) {
+
+          <p>
+
+            ✉️
+
+            {{ contact.email }}
+
+          </p>
+
+        }
+
+
+        @if (contact.address) {
+
+          <p>
+
+            📍
+
+            {{ contact.address }}
+
+          </p>
+
+        }
+
+
+        <!-- ACTIONS -->
+
+        <div class="actions">
+
+
+          <!-- EDIT -->
+
+          <button
+            class="edit-button"
+            [routerLink]="[
+              '/contacts/edit',
+              contact.id
+            ]"
+          >
+
+            Edit
+
+          </button>
+
+
+          <!-- DELETE -->
+
+          <button
+            class="delete-button"
+            (click)="deleteContact(contact.id!)"
+          >
+
+            Delete
+
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+    }
+
+
+  </div>
+
+
+  <!-- EMPTY STATE -->
+
+  @if (contacts.length === 0) {
+
+    <div class="empty">
+
+      <h3>
+        No contacts found
+      </h3>
+
+      <p>
+        Add your first contact.
+      </p>
+
+      <button
+        class="add-button"
+        [routerLink]="['/contacts/add']"
+      >
+
+        + Add Contact
+
+      </button>
+
+    </div>
+
+  }
+
+
+</div>

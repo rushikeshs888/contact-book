@@ -1,0 +1,11 @@
+# Angular
+contact-book-frontend/node_modules/
+contact-book-frontend/.angular/
+contact-book-frontend/dist/
+
+# Java and Maven
+contact-book-backend/target/
+
+# IDE
+.idea/
+*.iml

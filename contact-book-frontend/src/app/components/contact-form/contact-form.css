@@ -1,0 +1,191 @@
+.form-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 50px 20px;
+
+  background: #f5f7fa;
+}
+
+
+.form-card {
+  width: 100%;
+  max-width: 600px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+h1 {
+  margin: 0;
+
+  font-size: 28px;
+}
+
+
+.subtitle {
+  color: #777;
+
+  margin-top: 8px;
+
+  margin-bottom: 30px;
+}
+
+
+/* Form */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+}
+
+
+.form-group label span {
+  color: #d32f2f;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+  border-color: #1976d2;
+}
+
+
+.form-group textarea {
+
+  resize: vertical;
+}
+
+
+/* Validation */
+
+.field-error {
+
+  display: block;
+
+  margin-top: 6px;
+
+  color: #d32f2f;
+
+  font-size: 13px;
+}
+
+
+/* Messages */
+
+.success-message {
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  padding: 12px;
+
+  border-radius: 6px;
+
+  margin-bottom: 20px;
+}
+
+
+.error-message {
+
+  background: #ffebee;
+
+  color: #c62828;
+
+  padding: 12px;
+
+  border-radius: 6px;
+
+  margin-bottom: 20px;
+}
+
+
+/* Buttons */
+
+.button-container {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+
+.button-container button {
+
+  padding: 11px 22px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+
+.cancel-button {
+
+  background: #e0e0e0;
+
+  color: #333;
+}
+
+
+.save-button {
+
+  background: #1976d2;
+
+  color: white;
+}
+
+
+.save-button:disabled {
+
+  background: #90caf9;
+
+  cursor: not-allowed;
+}
